@@ -1,0 +1,3 @@
+fr i in rg 1 to 11 et bg
+pr 'hello' , i , 'times' el
+en

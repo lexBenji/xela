@@ -1,0 +1,95 @@
+#!/usr/bin/python3
+
+from sys import argv as a
+import subprocess
+
+hm = '''XELA usage:
+xela [file] (flags)
+
+XELA help:
+-r  / -run           : run file
+-c  / -compile       : compile file'''
+
+if len(a) < 2:
+    print(hm)
+    exit(1)
+
+if a[1] == '-h' or a[1] == '-help':
+    print(hm)
+else:
+
+    otf = a[1].replace('.xela','.py')
+
+    _str = ''
+    state = 0
+    c = ''
+    be = 0
+
+    with open(a[1],'r') as rf:
+        rf = rf.readlines()
+        with open(otf,'w') as wf:
+            for i in rf:
+                if be > 0:
+                    wf.write('\t'*be)
+                for w in i.split():
+                    if w == 'ld':
+                        wf.write('import ')
+                    elif w == '//':
+                        wf.write('# ')
+                    elif w == 'pr':
+                        wf.write('print( ')
+                    elif w == 'el':
+                        wf.write(')')
+                    elif w == 'fr':
+                        wf.write('for ')
+                    elif w == 'rg':
+                        wf.write('range( ')
+                    elif w == 'rr':
+                        wf.write('reversed( range( ')
+                    elif w == 'to':
+                        wf.write(', ')
+                    elif w == 'et':
+                        wf.write(')')
+                    elif w == 'er':
+                        wf.write('))')
+                    elif w == 'wh':
+                        wf.write('while ')
+                    elif w == 'T':
+                        wf.write('True ')
+                    elif w == 'F':
+                        wf.write('False')
+                    elif w == 'fn':
+                        wf.write('def ')
+                    elif w == 'bg':
+                        be += 1
+                        wf.write(':')
+                    elif w == 'nt':
+                        wf.write('not ')
+                    elif w == 'is':
+                        wf.write('== ')
+                    elif w == 'en':
+                        be = be - 1
+                    elif w == 'if':
+                        wf.write('if ')
+                    elif w == 'ef':
+                        wf.write('elif ')
+                    elif w == 'es':
+                        wf.write('else ')
+                    elif w == 'rt':
+                        wf.write('return ')
+                    elif w == 'in':
+                        wf.write('in ')
+                    elif w == 'fm':
+                        wf.write('from ')
+                    else: wf.write(f'{w} ')
+                wf.write('\n')
+
+if len(a) >= 3:
+    opt = a[2]
+    if opt == '-r' or opt == '-run':
+        subprocess.run(f'python3 {otf}',shell=True)
+        subprocess.run(f'rm {otf}',shell=True)
+    elif opt == '-c' or opt == '-compile':
+        print('Compile success')
+else:
+    print('Compile success')
