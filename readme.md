@@ -9,27 +9,27 @@ a programming language that is written in python to create a new python file to 
 2 reserved letters
 
 ```xela
-ld  import
-fr  for
-fm  from
-pr  print(
-el  )
-bg  :
-en
-if  if
-ef  elif
-es  else
-in  in
-rg
-rr
-er
+load    import
+for     for
+from    from
+print   print
+endl
+begin
+end
+if      if
+elif    elif
+else    else
+in      in
+range
+reverse
+endrg
+endrv
 to
-et
-is  ==
-nt  not
-rt  return
-wh  while
-fn  def
-T   True
-F   False
+is
+not     not
+ret     return
+while   while
+func    def
+T       True
+F       False
 ```

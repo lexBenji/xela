@@ -32,54 +32,54 @@ else:
                 if be > 0:
                     wf.write('\t'*be)
                 for w in i.split():
-                    if w == 'ld':
+                    if w == 'load':
                         wf.write('import ')
                     elif w == '//':
                         wf.write('# ')
-                    elif w == 'pr':
+                    elif w == 'print':
                         wf.write('print( ')
-                    elif w == 'el':
+                    elif w == 'endl':
                         wf.write(')')
-                    elif w == 'fr':
+                    elif w == 'for':
                         wf.write('for ')
-                    elif w == 'rg':
+                    elif w == 'range':
                         wf.write('range( ')
-                    elif w == 'rr':
-                        wf.write('reversed( range( ')
+                    elif w == 'reverse':
+                        wf.write('reversed( ')
                     elif w == 'to':
                         wf.write(', ')
-                    elif w == 'et':
+                    elif w == 'endrg':
                         wf.write(')')
-                    elif w == 'er':
+                    elif w == 'endrv':
                         wf.write('))')
-                    elif w == 'wh':
+                    elif w == 'while':
                         wf.write('while ')
                     elif w == 'T':
                         wf.write('True ')
                     elif w == 'F':
                         wf.write('False')
-                    elif w == 'fn':
+                    elif w == 'func':
                         wf.write('def ')
-                    elif w == 'bg':
+                    elif w == 'begin':
                         be += 1
                         wf.write(':')
-                    elif w == 'nt':
+                    elif w == 'not':
                         wf.write('not ')
                     elif w == 'is':
                         wf.write('== ')
-                    elif w == 'en':
+                    elif w == 'end':
                         be = be - 1
                     elif w == 'if':
                         wf.write('if ')
-                    elif w == 'ef':
+                    elif w == 'elif':
                         wf.write('elif ')
-                    elif w == 'es':
+                    elif w == 'else':
                         wf.write('else ')
-                    elif w == 'rt':
+                    elif w == 'ret':
                         wf.write('return ')
                     elif w == 'in':
                         wf.write('in ')
-                    elif w == 'fm':
+                    elif w == 'from':
                         wf.write('from ')
                     else: wf.write(f'{w} ')
                 wf.write('\n')
