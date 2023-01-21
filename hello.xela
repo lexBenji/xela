@@ -1,3 +1,5 @@
-fr i in rg 1 to 11 et bg
-pr 'hello' , i , 'times' el
-en
+// prints hello world 10 times
+
+for i in range 1 to 11 begin
+print 'hello world' , i , 'times' endl
+end

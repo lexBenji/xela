@@ -34,7 +34,7 @@ else:
                 for w in i.split():
                     if w == 'load':
                         wf.write('import ')
-                    elif w == '//':
+                    elif w == '//' or w.startswith('//'):
                         wf.write('# ')
                     elif w == 'print':
                         wf.write('print( ')
