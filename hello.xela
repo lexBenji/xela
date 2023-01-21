@@ -1,5 +1,5 @@
 // prints hello world 10 times
 
-for i in range 1 to 11 begin
+for i in range 1 to 11 endrg begin
 print 'hello world' , i , 'times' endl
 end
