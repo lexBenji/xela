@@ -1,0 +1,6 @@
+i = 0
+
+while not i is 11 begin
+print 'i =' , i endl
+i += 1
+end

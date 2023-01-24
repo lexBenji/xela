@@ -1,5 +1,4 @@
-# XELA
-## read as 'zee lah'
+# XELA ('zee luh')
 
 a programming language that is written in python to create a new python file to run the code
 
