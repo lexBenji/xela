@@ -65,8 +65,6 @@ else:
                         wf.write(':')
                     elif w == 'not':
                         wf.write('not ')
-                    elif w == 'is':
-                        wf.write('== ')
                     elif w == 'end':
                         be = be - 1
                     elif w == 'if':
@@ -81,6 +79,10 @@ else:
                         wf.write('in ')
                     elif w == 'from':
                         wf.write('from ')
+                    elif w == 'get':
+                        wf.write('input( ')
+                    elif w == 'endg':
+                        wf.write(')')
                     else: wf.write(f'{w} ')
                 wf.write('\n')
 

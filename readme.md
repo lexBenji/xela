@@ -9,26 +9,27 @@ a programming language that is written in python to create a new python file to 
 
 |keywords | usage|
 |---|---|
-|load|import|
-|for|for|
-|from|from|
-|print|print|
-|endl|
-|begin|
-|end|
-|if|if|
-|elif|elif|
-|else|else|
-|in|in|
-|range|range|
-|reverse|reversed|
-|endrg|
-|endrv|
-|to|
-|is|
-|not|not|
-|ret|return|
-|while|while|
-|func|def|
+|load|import function|
+|for|for loop|
+|from|from file import function|
+|print|starts print statement|
+|endl|ends print statement|
+|begin|start a function/loop|
+|end|end a function/loop|
+|if|if statement|
+|elif|when `if` fails|
+|else|when `if` and `elif` fails|
+|in|in range|
+|range|range from number to number|
+|reverse|reverse something|
+|endrg|end range|
+|endrv|end reverse|
+|to|used inside range|
+|not|something is not not|
+|ret|returns thing|
+|while|while loop|
+|func|function|
+|get|gets input|
+|endg|ends input|
 |T|True|
 |F|False|
